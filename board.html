@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=, initial-scale=1.0">
+   <title>chess board</title>
+<style>
+  h1{
+    text-align: center;
+ font-family: 'Courier New', Courier, monospace;
+ font-size: 70px;
+ padding: 0px;
+ 
+  }  
+  table{
+    border: 20px groove #c0c0c069;
+    width: 60%;
+    height: 900px;
+    margin: auto;
+    float: center;
+    max-width: 1000%;
+
+ 
+  }
+    
+  .black{
+    border: 2px solid black;
+    width: 20px;
+    margin: auto;
+    background:#481f01;
+  } 
+  .white{
+    border: 2px solid white;
+    width: 20px;
+    margin: auto;
+    background: whitesmoke;
+ 
+  } 
+  body{
+    background-color: #494747;
+    max-width: 3000px;
+    padding: 0px;
+    height: 2000px;
+  }
+  #queen{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    right: 540px;
+    left: 540px;
+    bottom: 350px;
+    top: 350px
+  
+  } 
+  #blackqueen{
+    position: relative;
+    width: 140px;
+    height: 90px;
+    bottom: 1200px;
+    top: 880px;
+    right: 880px;
+    left: 880px;
+ 
+ 
+  }
+  #rock{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    bottom: 350px;
+    top: 350px;
+    right: 400px;
+    left: 400px;
+ 
+  }
+  #whiterock{
+    position: relative;
+    width: 90px;
+    height: 90px;
+left: 650px;    
+right: 650px;   
+top: 350px; 
+bottom: 350px; 
+ 
+  }
+  #blackrock2{
+    position: relative;
+    width: 90px;
+    height: 88px;
+    top: 880px;
+    bottom: 880px;
+    right: 60px;
+    left: 60px;
+ 
+  }
+ #whitehorse{
+   position: relative;
+   height: 90px;
+   width: 100px;
+   top: 350px;
+   bottom: 350px;
+   left: 420px;
+   right: 420px;
+ }
+ #horse{
+   position: relative;
+   height: 100px;
+   width: 100px;
+   top: 125px;
+   bottom: 125px;
+   right: 930px;
+  left: 930px;
+ 
+ }
+ #blackhorse{
+   position: relative;
+   height: 85px;
+   width: 90px;
+   top: 1100px;
+   bottom: 1100px;
+ left: -30px;
+ right: -30px;
+ }
+ #bbhorse{
+   position: relative;
+   height: 85px;
+   width: 90px;
+   top: 980px;
+   bottom: 980px;
+   left: -150px;
+   right: -150px;
+ 
+ }
+ #whitebishop{
+   position: relative;
+   height: 90px;
+   width: 90px;
+   bottom: 350px;
+   top: 350px;
+   left: 190px;
+   right: 190px;
+ 
+ }
+ #whitebishop2{
+   position: relative;   
+   width: 90px;
+height: 90px;
+   bottom: 350px;
+   top: 350px;
+   left: 860px;
+   right: 850px;
+
+ }
+ #blackrock{
+   position: relative;
+    width: 90px;
+    height: 88px;
+    right: -100px;
+    left: -100px;
+    top: 980px;
+    bottom: 980px;
+ 
+ }
+ #blackbishop{
+   position: relative;
+   height: 100px;
+   width: 100px;
+   top: 990px;
+   bottom: 990px;
+   right: -450px;
+   left: -450px;
+ 
+ }
+ #blackbishop2{
+   position: relative;
+   height: 100px;
+   width: 100px;
+   top: 880px;
+   bottom: 880px;
+   right: 510px;
+   left: 510px;
+ 
+ 
+ }
+ #whiteking{
+   position: relative;
+   height: 100px;
+   width: 100px;
+   bottom: 360px;
+   top: 360px;
+   left: 500px;
+   right: 500px;
+ 
+ }
+ #blackking{
+   position: relative;
+   height: 100px;
+   width: 100px;
+  top: 980px;
+   bottom: 980px;
+   right: -810px;
+   left: -810px;
+ 
+ }
+ #wpawn1{
+   position: relative;
+   height: 120px;
+   width: 145px;
+   bottom: 480px;
+   top: 480px;
+   right: 10px;
+  left: 10px;
+  
+ }
+ #wpawn2{
+   position: relative;
+   height: 120px;
+   width: 145px;
+   bottom: 480px;
+   top: 480px;
+   right: 5px;
+  left: 5px;
+
+
+  
+ }
+ #wpawn3{
+   position: relative;
+   height: 120px;
+   width: 145px;
+   bottom: 480px;
+   top: 480px;
+   right: -10px;
+  left: -10px;
+
+ }
+ #wpawn4{
+   position: relative;
+   height: 120px;
+   width: 145px;
+   bottom: 480px;
+   top: 480px;
+   right: -30px;
+  left: -30px;
+
+ }
+ #wpawn5{
+   position: relative;
+   height: 120px;
+   width: 145px;
+   bottom: 480px;
+   top: 480px;
+   right: -40px;
+  left: -40px;
+
+ }
+ #wpawn6{
+   position: relative;
+   height: 120px;
+   width: 145px;
+   bottom: 480px;
+   top: 480px;
+   right: -840px;
+  left: -840px;
+
+  
+ }
+ #wpawn7{
+   position: relative;
+   height: 120px;
+   width: 145px;
+   bottom: 480px;
+   top: 480px;
+   right: -1120px;
+  left: -1120px;
+
+  
+ }
+ #wpawn8{
+   position: relative;
+   height: 120px;
+   width: 145px;
+bottom: 350px;
+top: 350px;
+  right: 370px;
+  left: 370px;
+ }
+ #blackpawn1{
+  position: relative;
+   height: 120px;
+   width: 145px;
+   top: 900px;
+   bottom: 900px;
+   left: 220px;
+   right: 220px;
+
+ }
+ #blackpawn2{
+  position: relative;
+   height: 120px;
+   width: 145px;
+   top: 900px;
+   bottom: 900px;
+   left: 210px;
+   right: 210px;
+
+ }
+ 
+ #blackpawn3{
+  position: relative;
+   height: 120px;
+   width: 145px;
+   top: 900px;
+   bottom: 900px;
+   left: 200px;
+   right: 200px;
+
+ }
+ 
+ #blackpawn4{
+  position: relative;
+   height: 120px;
+   width: 145px;
+   top: 900px;
+   bottom: 900px;
+   left: 180px;
+   right: 180px;
+
+ }
+ 
+ #blackpawn5{
+  position: relative;
+   height: 120px;
+   width: 145px;
+   top: 900px;
+   bottom: 900px;
+   left: 160px;
+   right: 160px;
+
+ }
+ 
+ #blackpawn6{
+  position: relative;
+   height: 120px;
+   width: 145px;
+   top: 900px;
+   bottom: 900px;
+   left: 140px;
+   right: 140px;
+
+ }
+ 
+ #blackpawn7{
+  position: relative;
+   height: 120px;
+   width: 145px;
+   top: 900px;
+   bottom: 900px;
+   left: 120px;
+   right: 120px;
+
+ }
+ 
+ #blackpawn8{
+  position: relative;
+   height: 120px;
+   width: 145px;
+   top: 900px;
+   bottom: 900px;
+   left: 100px;
+   right: 100px;
+
+ }
+ 
+
+
+</style>
+</head>
+<body>
+   
+  <h1>CHESS<img src="./img/chess.png" alt="error" width="120px" height="120px">BOARD</h1> 
+  <table align="center">
+   <tr>
+<td class="black"></td>
+<img src="img/whiterock.png" alt="" id="rock">
+<td class="white"></td>  
+<img src="img/whitehorse.png" alt="error" id="whitehorse">    
+<td class="black"></td>
+<img src="img/whitebishop.png" alt="error" id="whitebishop2">
+<td class="white"></td>
+<img src="img/whiteking.png" alt="error" id="whiteking">
+<td class="black"></td>
+<img src="./img/queen.png" alt="error" id="queen">      
+<td class="white"></td>
+<img src="img/whitebishop.png" alt="" id="whitebishop">      
+<td class="black"></td>
+<img src="./img/blackhorse.png" alt="error" id="blackhorse">      
+<td class="white"></td> 
+<img src="img/whiterock.png" alt="" id="whiterock">     
+     
+   </tr>
+   <tr>
+<td class="white"></td> 
+ <img src="img/whitepawn.png" alt="error" id="wpawn1">    
+<td class="black"></td>
+<img src="img/whitepawn.png" alt="error" id="wpawn2">
+<td class="white"></td> 
+<img src="img/whitepawn.png" alt="error" id="wpawn3">
+<td class="black"></td>
+<img src="img/whitepawn.png" alt="error" id="wpawn4">
+<td class="white"></td> 
+<img src="img/whitepawn.png" alt="error" id="wpawn5">
+<td class="black"></td>
+<img src="img/whitepawn.png" alt="error" id="wpawn6">
+<td class="white"></td> 
+<img src="img/whitepawn.png" alt="error" id="wpawn7">  
+<td class="black"></td> 
+  <img src="img/whitepawn.png" alt="error" id="wpawn8"> 
+   </tr>
+   <tr>
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+     
+   </tr>
+   <tr>
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+    
+   </tr>
+   <tr>
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+     
+   </tr>
+   <tr>
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+<td class="white"></td>      
+<td class="black"></td>      
+     
+   </tr>
+   <tr>
+<td class="black"></td>
+<img src="img/blackpawn.png" alt="error" id="blackpawn1">
+<td class="white"></td> 
+<img src="img/blackpawn.png" alt="error" id="blackpawn2">
+<td class="black"></td>
+<img src="img/blackpawn.png" alt="error" id="blackpawn3">
+<td class="white"></td>
+<img src="img/blackpawn.png" alt="error" id="blackpawn4">
+<td class="black"></td>
+<img src="img/blackpawn.png" alt="error" id="blackpawn5">
+<td class="white"></td> 
+<img src="img/blackpawn.png" alt="error" id="blackpawn6">
+<td class="black"></td>
+  <img src="img/blackpawn.png" alt="error" id="blackpawn7">    
+<td class="white"></td>      
+<img src="img/blackpawn.png" alt="error" id="blackpawn8">      
+   </tr>
+   <tr>
+<td class="white"></td> 
+<img src="img/./blackhorse.png" alt="" id="bbhorse">     
+<td class="black"></td>
+<img src="img/rockblack.png" alt="error" id="blackrock">      
+<td class="white"></td> 
+<img src="img/blackbishop.png" alt="error" id="blackbishop">     
+<td class="black"></td>  
+<img src="img/blackking.png" alt="error" id="blackking">    
+<td class="white"></td>
+<img src="./img/blackqueen.png" alt="error" id="blackqueen">
+<td class="black"></td> 
+<img src="img/blackbishop.png" alt="error" id="blackbishop2">     
+<td class="white"></td> 
+<img src="img/whitehorse.png" alt="" id="horse">     
+<td class="black"></td>   
+<img src="img/rockblack.png" alt="" id="blackrock2">   
+      
+   </tr>
+
+   
+  </table> 
+</body>
+</html>
